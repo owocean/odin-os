@@ -13,7 +13,7 @@ cd ..
 export ODIN_ROOT=kernel
 echo "==> Compiling the kernel"
 odin build kernel                     \
-    -out:bin/kernel                   \
+    -out:bin/                         \
     -collection:kernel=kernel         \
     -debug                            \
     -build-mode:obj                   \
@@ -26,7 +26,6 @@ odin build kernel                     \
     -default-to-nil-allocator         \
     -foreign-error-procedures         \
     -vet                              \
-    -strict-style                     \
     -disallow-do                      \
     -no-threaded-checker              \
     -no-rtti                          \

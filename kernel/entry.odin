@@ -1,12 +1,9 @@
-
 package kernel
-
-// import odin_runtime "core:runtime"
 
 import "limine"
 import "kernel:cpu"
 import "core:io"
-import "core:runtime"
+import "base:runtime"
 
 // Odin runtime functions. You can see an example in core:runtime,
 // but basically they initialize the global variables and call @(init)

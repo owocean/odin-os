@@ -101,6 +101,28 @@ foreign {
 }
 
 @(private)
-__init_context :: proc "contextless" (c: ^Context) {
+_init_context :: proc "contextless" (c: ^Context) {
     return
 }
+
+/* @(private)
+_init_context :: proc "contextless" (c: ^Context) {
+    if c == nil { return }
+    c.allocator.procedure = default_allocator_proc
+    c.allocator.data = nil
+
+    c.temp_allocator.procedure = default_temp_allocator_proc
+    when !NO_DEFAULT_TEMP_ALLOCATOR {
+        c.temp_allocator.data = &global_default_temp_allocator_data
+    }
+
+    when !ODIN_DISABLE_ASSERT {
+        c.assertion_failure_proc = default_assertion_failure_proc
+    }
+
+    c.logger.procedure = default_logger_proc
+    c.logger.data = nil
+
+    c.random_generator.procedure = default_random_generator_proc
+    c.random_generator.data = nil
+} */

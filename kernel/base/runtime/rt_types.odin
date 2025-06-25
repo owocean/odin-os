@@ -39,3 +39,13 @@ Raw_Soa_Pointer :: struct {
     data:  rawptr,
     index: int,
 }
+
+Type_Info_Bit_Field :: struct {
+    backing_type: ^Type_Info,
+    names:        [^]string     `fmt:"v,field_count"`,
+    types:        [^]^Type_Info `fmt:"v,field_count"`,
+    bit_sizes:    [^]uintptr    `fmt:"v,field_count"`,
+    bit_offsets:  [^]uintptr    `fmt:"v,field_count"`,
+    tags:         [^]string     `fmt:"v,field_count"`,
+    field_count:  int,
+}

@@ -1,4 +1,3 @@
-
 // Bindings related to Limine boot protocol.
 // Docs:   https://github.com/limine-bootloader/limine/blob/v3.0-branch/PROTOCOL.md
 // Source: https://github.com/limine-bootloader/limine/blob/v3.0-branch/limine.h
